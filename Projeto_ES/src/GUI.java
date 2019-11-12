@@ -29,11 +29,11 @@ public class GUI {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(4,1));
 		
-		JTextField t1 = new JTextField();
-		JTextField t2 = new JTextField();
+		JTextField locLimit = new JTextField();
+		JTextField cycloLImit = new JTextField();
 		JButton AplicarLimite = new JButton("Aplicar limites");
-		panel.add(t1);
-		panel.add(t2);
+		panel.add(locLimit);
+		panel.add(cycloLImit);
 		panel.add(AplicarLimite);
 		
 		
@@ -46,9 +46,9 @@ public class GUI {
 		JPanel panel1 = new JPanel();
 		panel1.setLayout(new GridLayout(1,2));
 		JButton IPlasma = new JButton("IPlasma");
-		JButton PMO = new JButton("PMO");
+		JButton PMD = new JButton("PMD");
 		panel1.add(IPlasma);
-		panel1.add(PMO);
+		panel1.add(PMD);
 		
 		frame.add(panel1, BorderLayout.SOUTH);
 		
@@ -62,38 +62,6 @@ public class GUI {
 		frame.open();
 		
 	}
-	
-	
-
-//	private JFrame frame;
-//
-//	public GUI() {
-//
-//		frame = new JFrame();
-//
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//
-//		frame.setLayout(new BorderLayout());
-//
-//		addFrameContent();
-//
-//		open();
-//	}
-//
-//
-//	public void addFrameContent() {
-//
-//		JPanel painelTop = new JPanel();
-//		painelTop.setLayout(new GridLayout(1,3));
-//	}
-//
-//	public void open() {
-//		frame.setSize(500, 300);
-//		frame.setVisible(true);
-//	}
-//
-//	public void ex() {
-//	}
 
 
 }
