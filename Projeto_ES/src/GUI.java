@@ -22,6 +22,7 @@ public class GUI {
 	
 	public void open() {
 		frame.setVisible(true);
+		frame.setSize(500, 300);
 	}
 	
 	private void addFrameContent() {

@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class ExcelReader {
-    public static final String SAMPLE_XLSX_FILE_PATH = "C:\\Users\\Diogo Almeida\\Downloads\\Long-Method.xlsx";
+    public static final String SAMPLE_XLSX_FILE_PATH = "C:\\Users\\joaov\\Downloads\\Long-Method.xlsx";
     
     public static void main(String[] args) throws IOException, InvalidFormatException {
     	
-        Workbook workbook = WorkbookFactory.create(new File("C:\\Users\\Diogo Almeida\\Downloads\\Long-Method.xlsx"));
+        Workbook workbook = WorkbookFactory.create(new File("C:\\Users\\joaov\\Downloads\\Long-Method.xlsx"));
 
         Sheet sheet = workbook.getSheetAt(0);
    
