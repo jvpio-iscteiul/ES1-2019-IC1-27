@@ -4,8 +4,10 @@ import java.io.IOException;
 
 import javax.swing.JTextField;
 
+
 public class Conditions {
 
+	
 	private static boolean is_long_method;
 	private BufferedReader in;
 	private static final int LENGTH = 30;
@@ -15,6 +17,7 @@ public class Conditions {
 	private ReadCellInteger rci;
 	private ReadCellBoolean rcb;
 
+	
 	public Conditions() {
 		this.rci = new ReadCellInteger();
 		this.rcb = new ReadCellBoolean();
@@ -33,6 +36,7 @@ public class Conditions {
 		return is_long_method;
 	}
 	
+	
 	public int getDCI(JTextField tx1) {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
@@ -42,9 +46,13 @@ public class Conditions {
 			if(is_long_method == true && (iPlasma || pmd) == true) {
 				count++;
 			}
+			
 		}
+		
 		return count;
 	}
+	
+	
 	
 	public int getDII() {
 		int count = 0;
@@ -55,9 +63,12 @@ public class Conditions {
 			if(is_long_method == true && (iPlasma || pmd) == false) {
 				count++;
 			}
+			
 		}
+		
 		return count;
 	}
+	
 	
 	
 	public int getADCI() {
@@ -69,7 +80,9 @@ public class Conditions {
 			if(is_long_method == false && (iPlasma || pmd) == false) {
 				count++;
 			}
+			
 		}
+		
 		return count;
 	}
 	
@@ -93,5 +106,13 @@ public class Conditions {
 //		System.out.println(c.getDCI());
 		System.out.println("Oi");
 	}
+
+	
+	
+	
+	
+	
+	
+	
 	
 }
