@@ -46,7 +46,6 @@ public class GUI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cond = new Conditions();
 				cond.setLongMethod(locLimit, cycloLImit);
 			}
 		});
