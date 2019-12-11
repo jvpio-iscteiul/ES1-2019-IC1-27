@@ -48,6 +48,7 @@ public class GUI {
 //		JLabel lab1 = new JLabel("LOC");
 //		JLabel lab2 = new JLabel("CYCLO");
 		
+
 //		JButton aplicarLimite = new JButton("Aplicar limites");
 //		aplicarLimite.addActionListener(new ActionListener() {
 //			
@@ -57,6 +58,16 @@ public class GUI {
 //				cond.setLongMethod(locLimit, cycloLImit);
 //			}
 //		});
+
+		JButton aplicarLimite = new JButton("Aplicar limites");
+		aplicarLimite.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+
 		
 //		panel.add(lab1);
 //		panel.add(locLimit);
