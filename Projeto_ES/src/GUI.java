@@ -161,7 +161,7 @@ public class GUI {
 	
 	public static void main(String[] args) {
 		GUI frame = new GUI();
-		System.out.println(" ");
+		System.out.println(" s");
 		frame.open();
 		
 	}
