@@ -63,7 +63,7 @@ public class Conditions {
 	}
 
 	public void aol() {
-		
+		System.out.println("s");
 	}
 
 	public int getDCI(JTextField tx1) {
