@@ -12,8 +12,11 @@ import javax.swing.WindowConstants;
 
 public class GUI {
 	
+	
 	private JFrame frame;
 	private Conditions cond;
+	
+	
 	
 	public GUI() {
 		frame = new JFrame();
@@ -23,10 +26,12 @@ public class GUI {
 		frame.pack();
 	}
 	
+	
 	public void open() {
 		frame.setVisible(true);
 		frame.setSize(500, 300);
 	}
+	
 	
 	private void addFrameContent() {
 		
@@ -97,7 +102,6 @@ public class GUI {
 		panel2.add(tx4);
 		
 		frame.add(panel2, BorderLayout.EAST);
-		
 	}
 	
 	
@@ -106,9 +110,7 @@ public class GUI {
 		GUI frame = new GUI();
 		System.out.println("BBBBBBBBB");
 		frame.open();
-		System.out.println("CCCCCCCCCCC");
-		
+		System.out.println("CCCCCCCCCCC");		
 	}
-
 
 }
