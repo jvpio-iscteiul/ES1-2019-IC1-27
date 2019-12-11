@@ -70,6 +70,26 @@ public class GUI {
 //			}
 //		});
 
+
+//		JButton aplicarLimite = new JButton("Aplicar limites");
+//		aplicarLimite.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				cond = new Conditions();
+//				cond.setLongMethod(locLimit, cycloLImit);
+//			}
+//		});
+
+//		JButton aplicarLimite = new JButton("Aplicar limites");
+//		aplicarLimite.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				
+//			}
+//		});
+
 		
 //		panel.add(lab1);
 //		panel.add(locLimit);
@@ -107,6 +127,7 @@ public class GUI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+
 				List<String> lista = cond.setLongMethod(t1, t2);
 				
 				for(String s : lista)
