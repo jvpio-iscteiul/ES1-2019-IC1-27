@@ -62,6 +62,9 @@ public class Conditions {
 		return lista;
 	}
 
+	public void aol() {
+		
+	}
 
 	public int getDCI(JTextField tx1) {
 		int count = 0;
