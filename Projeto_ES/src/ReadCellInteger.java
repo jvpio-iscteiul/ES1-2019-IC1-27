@@ -9,9 +9,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadCellInteger   {  
  
-	public String ReadCellData(int vRow, int vColumn)  
+	public int ReadCellData(int vRow, int vColumn)  
 	{  
-		String value;          //variable for storing the cell value  
+		int value;          //variable for storing the cell value  
 		Workbook wb=null;           //initialize Workbook null  
 		try  
 		{  
@@ -31,8 +31,7 @@ public class ReadCellInteger   {
 		Sheet sheet=wb.getSheetAt(0);   //getting the XSSFSheet object at given index  
 		Row row=sheet.getRow(vRow); //returns the logical row  
 		Cell cell=row.getCell(vColumn); //getting the cell representing the given column  
-		value=cell.getStringCellValue();
-		value.toString();
+		value=(int) cell.getNumericCellValue();
 		return value;               //returns the cell value  
 	} 
 	
@@ -40,9 +39,8 @@ public class ReadCellInteger   {
 	{  
 	ReadCellInteger rc=new ReadCellInteger();   //object of the class  
 	//reading the value of 2nd row and 2nd column  
-	String vOutput=rc.ReadCellData(2, 4);   
-	int foo = Integer.parseInt(vOutput);
-	System.out.println(foo);  
+	int vOutput=rc.ReadCellData(420, 4);   
+	System.out.println(vOutput);
 	}  
 	//method defined for reading a cell 
 }  
