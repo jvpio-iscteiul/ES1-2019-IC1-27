@@ -2,10 +2,11 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/joaov/Downloads/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/joaov/Downloads/poi-ooxml-schemas-3.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/joaov/Downloads/poi-ooxml-3.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/joaov/Downloads/poi-3.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/joaov/Downloads/commons-collections4-4.1.jar"/>
+	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/Bárbara Ferreira/Downloads/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bárbara Ferreira/Downloads/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bárbara Ferreira/Downloads/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bárbara Ferreira/Downloads/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bárbara Ferreira/Downloads/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
