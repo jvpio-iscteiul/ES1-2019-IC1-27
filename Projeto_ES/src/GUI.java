@@ -2,6 +2,8 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -23,7 +25,7 @@ public class GUI {
 	public GUI() {
 		frame = new JFrame();
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		//this.cond = new Conditions();
+		this.cond = new Conditions();
 		addFrameContent();
 		frame.pack();
 	}
@@ -59,14 +61,14 @@ public class GUI {
 //			}
 //		});
 
-		JButton aplicarLimite = new JButton("Aplicar limites");
-		aplicarLimite.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
+//		JButton aplicarLimite = new JButton("Aplicar limites");
+//		aplicarLimite.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				
+//			}
+//		});
 
 		
 //		panel.add(lab1);
@@ -79,11 +81,12 @@ public class GUI {
 		
 		JPanel panel4 = new JPanel();
 		
-		JList<String> list = new JList<String>();
 		DefaultListModel<String> model = new DefaultListModel<String>();
+//		JList<String> list = new JList<String>(model);
+		
 		//adicionar a lista qd feita
 		
-		panel4.add(list);
+//		panel4.add(list);
 		JScrollPane pane = new JScrollPane(panel4);
 		
 		frame.add(pane, BorderLayout.CENTER);
@@ -96,7 +99,24 @@ public class GUI {
 		JPanel panel2 = new JPanel();
 		panel2.setLayout(new GridLayout(4, 2));
 		
+		JTextField t1 = new JTextField("40");
+		JTextField t2 = new JTextField("40");
+		
 		JButton loc = new JButton("LOC");
+		loc.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				List<String> lista = new ArrayList<String>();
+				lista = cond.setLongMethod(t1,t2);
+				
+				for(String s : lista)
+					model.addElement(s);
+				
+				JList<String> list = new JList<String>(model);
+				panel4.add(list);
+			}
+		});
 		
 		JButton cyclo = new JButton("CYCLO");
 		JButton atfd = new JButton("ATFD");
