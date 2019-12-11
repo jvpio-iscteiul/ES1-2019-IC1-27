@@ -11,7 +11,7 @@ public class Conditions {
 	private boolean is_long_method;
 	private boolean is_feature_envy;
 	private BufferedReader in;
-	private static final int LENGTH = 30;
+	private static final int LENGTH = 20;
 	private static final int LOC = 4;
 	private static final int CYCLO = 5;
 	private static final int ATFD = 6;
@@ -23,13 +23,15 @@ public class Conditions {
 	private ReadCellInteger rci;
 	private ReadCellBoolean rcb;
 	private ReadCellString rcs;
-	private List<String> lista;
+	private List<String> lista1;
+	private List<String> lista2;
 
 
 	public Conditions() {
 		this.rci = new ReadCellInteger();
 		this.rcb = new ReadCellBoolean();
-		this.lista = new ArrayList<String>();
+		this.rcs = new ReadCellString();
+		this.lista1 = new ArrayList<String>();
 	}
 
 
@@ -42,9 +44,10 @@ public class Conditions {
 			int lim1 = rci.ReadCellData(i, LOC);
 			int lim2 = rci.ReadCellData(i, CYCLO);
 			if (lim1 > x && lim2 > y) 
-				lista.add(rcs.ReadCellData(i, METHOD));
+				System.out.println(rcs.ReadCellData(i, METHOD));
+				lista1.add(rcs.ReadCellData(i, METHOD));
 		}
-		return lista;
+		return lista1;
 	}
 
 
@@ -57,10 +60,10 @@ public class Conditions {
 			int lim1 = rci.ReadCellData(i, ATFD);
 			int lim2 = rci.ReadCellData(i, LAA);
 			if (lim1 > x && lim2 < y) 
-				lista.add(rcs.ReadCellData(i, METHOD));
+				lista2.add(rcs.ReadCellData(i, METHOD));
 		}
 
-		return lista;
+		return lista2;
 	}
 
 	public void aol() {
@@ -126,7 +129,7 @@ public class Conditions {
 	public static void main(String[] args)   {  
 		Conditions c = new Conditions();
 		System.out.println("aaa");
-		//		System.out.println(c.getDCI());
+		System.out.println("");
 		System.out.println("Oi");
 	}
 
