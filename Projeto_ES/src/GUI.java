@@ -51,10 +51,10 @@ public class GUI {
 		JLabel labelATFD = new JLabel("ATFD");
 		JLabel labelLAA = new JLabel("LAA");
 		
-		JTextField textLOC = new JTextField("0");
-		JTextField textCYCLO = new JTextField("0");
-		JTextField textATFD = new JTextField("0");
-		JTextField textLAA = new JTextField("0");
+		JTextField textLOC = new JTextField("       ");
+		JTextField textCYCLO = new JTextField("       ");
+		JTextField textATFD = new JTextField("       ");
+		JTextField textLAA = new JTextField("       ");
 		
 		JButton buttonLM = new JButton("Definir Long Method");
 		buttonLM.addActionListener(new ActionListener() {
@@ -70,11 +70,17 @@ public class GUI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
+				cond.compareIPlasma();
 			}
 		});
 		JButton procuraPMD = new JButton("Procura PMD");
+		procuraPMD.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cond.comparePmd();
+			}
+		});
 		JButton procuraValores = new JButton("Procura Valores do Utilizador");
 		procuraValores.addActionListener(new ActionListener() {
 			
