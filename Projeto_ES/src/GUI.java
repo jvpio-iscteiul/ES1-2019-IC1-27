@@ -42,15 +42,17 @@ public class GUI {
 		JPanel panelEast = new JPanel();
 		JPanel panelLM = new JPanel();
 		JPanel panelFE = new JPanel();
+		JPanel panelProcura = new JPanel();
 		JPanel lmButtons = new JPanel();
 		JPanel lmTexts = new JPanel();
 		JPanel feButtons = new JPanel();
 		JPanel feTexts = new JPanel();
 		
-		panelEast.setLayout(new BorderLayout());
+		panelEast.setLayout(new GridLayout(3,1));
 		panelWest.setLayout(new BorderLayout());
 		panelLM.setLayout(new BorderLayout());
 		panelFE.setLayout(new BorderLayout());
+		panelProcura.setLayout(new BorderLayout());
 		lmButtons.setLayout(new BorderLayout());
 		lmTexts.setLayout(new BorderLayout());
 		feButtons.setLayout(new BorderLayout());
@@ -75,11 +77,17 @@ public class GUI {
 			}
 		});
 		JButton buttonFE = new JButton("Definir Feature envy");
+		JButton procuraIPlasma = new JButton("Procura IPlasma");
+		JButton procuraPMD = new JButton("Procura PMD");
+		JButton procuraValores = new JButton("Procura Valores do Utilizador");
 		
 		frame.add(panelEast,BorderLayout.EAST);
 		frame.add(panelWest, BorderLayout.WEST);
-		panelEast.add(panelLM, BorderLayout.NORTH);
-		panelEast.add(panelFE, BorderLayout.SOUTH);
+		panelEast.add(panelLM);
+		panelEast.add(panelProcura);
+		panelEast.add(panelFE);
+		
+		
 		
 		panelLM.add(buttonLM, BorderLayout.SOUTH);
 		panelLM.add(lmButtons, BorderLayout.WEST);
@@ -88,6 +96,10 @@ public class GUI {
 		panelFE.add(buttonFE, BorderLayout.SOUTH);
 		panelFE.add(feButtons, BorderLayout.WEST);
 		panelFE.add(feTexts, BorderLayout.EAST);
+		
+		panelProcura.add(procuraIPlasma, BorderLayout.NORTH);
+		panelProcura.add(procuraPMD, BorderLayout.CENTER);
+		panelProcura.add(procuraValores, BorderLayout.SOUTH);
 		
 		lmButtons.add(labelLOC, BorderLayout.NORTH);
 		lmButtons.add(labelCYCLO, BorderLayout.SOUTH);
