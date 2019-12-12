@@ -40,17 +40,11 @@ public class GUI {
 		
 		JPanel panelWest = new JPanel();
 		JPanel panelEast = new JPanel();
-		JPanel panelFE = new JPanel();
 		JPanel panelProcura = new JPanel();
-		JPanel feButtons = new JPanel();
-		JPanel feTexts = new JPanel();
-		
+
 		panelEast.setLayout(new GridLayout(3,1));
 		panelWest.setLayout(new BorderLayout());
-		panelFE.setLayout(new BorderLayout());
 		panelProcura.setLayout(new BorderLayout());
-		feButtons.setLayout(new BorderLayout());
-		feTexts.setLayout(new BorderLayout());
 		
 		JLabel labelLOC = new JLabel("LOC");
 		JLabel labelCYCLO = new JLabel("CYCLO");
@@ -80,11 +74,22 @@ public class GUI {
 			public void actionPerformed(ActionEvent e) {
 				JFrame frame1 = new JFrame();
 				JPanel panelLM = new JPanel();
+				JPanel panelFE = new JPanel();
+				
 				JPanel lmButtons = new JPanel();
 				JPanel lmTexts = new JPanel();
+				JPanel feButtons = new JPanel();
+				JPanel feTexts = new JPanel();
+				
+//				panelFE.setLayout(new BorderLayout());
+				feButtons.setLayout(new BorderLayout());
+				feTexts.setLayout(new BorderLayout());
 				lmButtons.setLayout(new BorderLayout());
 				lmTexts.setLayout(new BorderLayout());
 				
+				panelFE.add(buttonFE, BorderLayout.SOUTH);
+				panelFE.add(feButtons, BorderLayout.WEST);
+				panelFE.add(feTexts, BorderLayout.EAST);
 				panelLM.add(buttonLM, BorderLayout.SOUTH);
 				panelLM.add(lmButtons, BorderLayout.WEST);
 				panelLM.add(lmTexts, BorderLayout.EAST);
@@ -93,8 +98,13 @@ public class GUI {
 				lmButtons.add(labelCYCLO, BorderLayout.SOUTH);
 				lmTexts.add(textLOC, BorderLayout.NORTH);
 				lmTexts.add(textCYCLO, BorderLayout.SOUTH);
+				feButtons.add(labelATFD, BorderLayout.NORTH);
+				feButtons.add(labelLAA, BorderLayout.SOUTH);
+				feTexts.add(textATFD, BorderLayout.NORTH);
+				feTexts.add(textLAA, BorderLayout.SOUTH);
 				
-				frame1.add(panelLM);
+				frame1.add(panelLM, BorderLayout.NORTH);
+				frame1.add(panelFE, BorderLayout.SOUTH);
 				frame1.setVisible(true);
 				frame1.setSize(200, 150);
 				
@@ -104,26 +114,11 @@ public class GUI {
 		frame.add(panelEast,BorderLayout.EAST);
 		frame.add(panelWest, BorderLayout.WEST);
 		panelEast.add(panelProcura);
-		panelEast.add(panelFE);
-		
-		
-		
-
-		
-		panelFE.add(buttonFE, BorderLayout.SOUTH);
-		panelFE.add(feButtons, BorderLayout.WEST);
-		panelFE.add(feTexts, BorderLayout.EAST);
 		
 		panelProcura.add(procuraIPlasma, BorderLayout.NORTH);
 		panelProcura.add(procuraPMD, BorderLayout.CENTER);
 		panelProcura.add(procuraValores, BorderLayout.SOUTH);
 		
-
-		
-		feButtons.add(labelATFD, BorderLayout.NORTH);
-		feButtons.add(labelLAA, BorderLayout.SOUTH);
-		feTexts.add(textATFD, BorderLayout.NORTH);
-		feTexts.add(textLAA, BorderLayout.SOUTH);
 		
 //		frame.setLayout(new BorderLayout());
 //		
