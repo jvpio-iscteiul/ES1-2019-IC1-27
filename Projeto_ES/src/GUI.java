@@ -208,7 +208,7 @@ public class GUI {
 				JPanel paneladci = new JPanel();
 				paneladci.setLayout(new GridLayout(2,1));
 				
-				JButton buttoniPLasma2 = new JButton("Testar IPlasm");
+				JButton buttoniPLasma2 = new JButton("Testar IPlasma");
 				JButton buttonPMD2 = new JButton("Testar PMD");
 				
 				paneladci.add(buttoniPLasma2);
