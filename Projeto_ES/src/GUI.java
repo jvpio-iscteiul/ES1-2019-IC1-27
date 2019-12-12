@@ -72,6 +72,14 @@ public class GUI {
 		});
 		JButton buttonFE = new JButton("Definir Feature envy");
 		JButton procuraIPlasma = new JButton("Procura IPlasma");
+		procuraIPlasma.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		JButton procuraPMD = new JButton("Procura PMD");
 		JButton procuraValores = new JButton("Procura Valores do Utilizador");
 		procuraValores.addActionListener(new ActionListener() {

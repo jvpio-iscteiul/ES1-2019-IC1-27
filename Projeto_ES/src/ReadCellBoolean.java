@@ -14,7 +14,7 @@ public class ReadCellBoolean   {
 		Workbook wb=null;           //initialize Workbook null  
 		try  {  
 			//reading data from a file in the form of bytes  
-			FileInputStream fis=new FileInputStream("C:\\Users\\joaov\\Downloads\\Long-Method.xlsx");  
+			FileInputStream fis=new FileInputStream("C:\\Users\\topedro97\\Downloads\\Long-Method.xlsx");  
 			//constructs an XSSFWorkbook object, by buffering the whole stream into the memory  
 			wb=new XSSFWorkbook(fis);  
 		}  
@@ -34,7 +34,7 @@ public class ReadCellBoolean   {
 	public static void main(String[] args)   {  
 		ReadCellBoolean rc=new ReadCellBoolean();   //object of the class  
 		//reading the value of 2nd row and 2nd column  
-		boolean vOutput=rc.ReadCellData(15, 8);   
+		boolean vOutput=rc.ReadCellData(13, 8);   
 		System.out.println(vOutput);  
 	}  
 	//method defined for reading a cell 

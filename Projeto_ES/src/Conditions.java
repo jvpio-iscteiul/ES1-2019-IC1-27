@@ -116,6 +116,12 @@ public class Conditions {
 		}
 		return count;
 	}
+	
+	public void compareIPlasma() {
+		for (int i = 1; i < LENGTH; i++) {
+			
+		}
+	}
 
 
 	public static void main(String[] args)   {  
