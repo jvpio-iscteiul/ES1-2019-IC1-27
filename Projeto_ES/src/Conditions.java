@@ -62,14 +62,7 @@ public class Conditions {
 		}
 		return lista2;
 	}
-
-	public void aol() {
-		System.out.println("s");
-	}
-
-	public void add() {
-	
-	}
+		
 	
 	public int getDCI(JTextField tx1) {
 		int count = 0;
