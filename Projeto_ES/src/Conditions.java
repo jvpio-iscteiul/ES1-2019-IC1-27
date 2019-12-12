@@ -116,11 +116,35 @@ public class Conditions {
 		}
 		return count;
 	}
+	
+	public int compareIPlasma() {
+		int count = 0;
+		for (int i = 1; i < LENGTH; i++) {
+			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
+			
+			if (iPlasma == true)
+				count++;
+		}
+		return count;
+	}
 
+	
+	public int comparePmd() {
+		int count = 0;
+		for (int i = 1; i < LENGTH; i++) {
+			boolean pmd = rcb.ReadCellData(i, PMD);
+			
+			if (pmd == true)
+				count++;
+		}
+		return count;
+	}
 
 	public static void main(String[] args)   {  
 		Conditions c = new Conditions();
-		System.out.println("");
+		System.out.println("aaa");
+		System.out.println(c.compareIPlasma());
+		System.out.println(c.comparePmd());
 		System.out.println("Oi");
 	}
 

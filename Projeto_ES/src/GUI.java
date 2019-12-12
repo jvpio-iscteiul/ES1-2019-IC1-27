@@ -58,10 +58,10 @@ public class GUI {
 		JLabel labelATFD = new JLabel("ATFD");
 		JLabel labelLAA = new JLabel("LAA");
 		
-		JTextField textLOC = new JTextField("0");
-		JTextField textCYCLO = new JTextField("0");
-		JTextField textATFD = new JTextField("0");
-		JTextField textLAA = new JTextField("0");
+		JTextField textLOC = new JTextField("       ");
+		JTextField textCYCLO = new JTextField("       ");
+		JTextField textATFD = new JTextField("       ");
+		JTextField textLAA = new JTextField("       ");
 		
 		panel3.add(dci);
 		panel3.add(dii);
@@ -81,7 +81,21 @@ public class GUI {
 		});
 		JButton buttonFE = new JButton("Definir Feature envy");
 		JButton procuraIPlasma = new JButton("Procura IPlasma");
+		procuraIPlasma.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cond.compareIPlasma();
+			}
+		});
 		JButton procuraPMD = new JButton("Procura PMD");
+		procuraPMD.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cond.comparePmd();
+			}
+		});
 		JButton procuraValores = new JButton("Procura Valores do Utilizador");
 		procuraValores.addActionListener(new ActionListener() {
 			
