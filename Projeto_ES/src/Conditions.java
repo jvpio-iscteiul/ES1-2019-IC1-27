@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTextField;
 
-
 public class Conditions {
 
 	private boolean is_long_method;
@@ -26,14 +25,14 @@ public class Conditions {
 	private List<String> lista1;
 	private List<String> lista2;
 
-
+	
+	
 	public Conditions() {
 		this.rci = new ReadCellInteger();
 		this.rcb = new ReadCellBoolean();
 		this.rcs = new ReadCellString();
 		this.lista1 = new ArrayList<String>();
 	}
-
 
 	public List<String> setLongMethod(JTextField locLimit, JTextField cycloLImit) {
 		String ll = locLimit.getText();
@@ -50,7 +49,6 @@ public class Conditions {
 		return lista1;
 	}
 
-
 	public List<String> setFeatureEnvy(JTextField locLimit, JTextField cycloLImit) {
 		String ll = locLimit.getText();
 		int x = Integer.parseInt(ll);
@@ -62,7 +60,6 @@ public class Conditions {
 			if (lim1 > x && lim2 < y) 
 				lista2.add(rcs.ReadCellData(i, METHOD));
 		}
-
 		return lista2;
 	}
 
@@ -70,7 +67,10 @@ public class Conditions {
 		System.out.println("s");
 	}
 
-
+	public void add() {
+	
+	}
+	
 	public int getDCI(JTextField tx1) {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
@@ -98,7 +98,6 @@ public class Conditions {
 		return count;
 	}
 
-	
 	public int getADCI() {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
@@ -128,10 +127,14 @@ public class Conditions {
 
 	public static void main(String[] args)   {  
 		Conditions c = new Conditions();
-		System.out.println("aaa");
 		System.out.println("");
 		System.out.println("Oi");
 	}
 
+	
+	
+	
+	
+	
 
 }

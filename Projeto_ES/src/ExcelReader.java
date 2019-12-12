@@ -1,4 +1,3 @@
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 import java.io.File;
@@ -6,12 +5,11 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class ExcelReader {
+	
     public static final String SAMPLE_XLSX_FILE_PATH = "C:\\Users\\joaov\\Downloads\\Long-Method.xlsx";
     
-    public static void main(String[] args) throws IOException, InvalidFormatException {
-    	
+    public static void main(String[] args) throws IOException, InvalidFormatException {    	
         Workbook workbook = WorkbookFactory.create(new File("C:\\Users\\joaov\\Downloads\\Long-Method.xlsx"));
-
         Sheet sheet = workbook.getSheetAt(0);
    
         sheet.forEach(row -> {
@@ -21,10 +19,10 @@ public class ExcelReader {
     	});
         workbook.close();
     }
-    private static void printCellValue(Cell cell, int Row, int Column) {
-    	
-     if (cell.getRowIndex()==Row && cell.getColumnIndex()==Column){
-                 
+    
+    private static void printCellValue(Cell cell, int Row, int Column) {	
+     
+    	if (cell.getRowIndex()==Row && cell.getColumnIndex()==Column){
         switch (cell.getCellTypeEnum()) {
             case BOOLEAN:
                 System.out.print(cell.getBooleanCellValue());
@@ -47,8 +45,8 @@ public class ExcelReader {
                 break;
             default:
                 System.out.print("");
-        }
-    }
+        	}
+    	}
     }
     
  
