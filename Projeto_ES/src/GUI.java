@@ -41,10 +41,17 @@ public class GUI {
 		JPanel panelWest = new JPanel();
 		JPanel panelEast = new JPanel();
 		JPanel panelProcura = new JPanel();
+		JPanel panel3 = new JPanel();
 
 		panelEast.setLayout(new GridLayout(3,1));
 		panelWest.setLayout(new BorderLayout());
 		panelProcura.setLayout(new BorderLayout());
+		panel3.setLayout(new GridLayout(1, 4));
+		
+		JButton dci = new JButton("DCI");
+		JButton dii = new JButton("DII");
+		JButton adci = new JButton("ADCI");
+		JButton adii = new JButton("ADII");
 		
 		JLabel labelLOC = new JLabel("LOC");
 		JLabel labelCYCLO = new JLabel("CYCLO");
@@ -56,7 +63,15 @@ public class GUI {
 		JTextField textATFD = new JTextField("0");
 		JTextField textLAA = new JTextField("0");
 		
+		panel3.add(dci);
+		panel3.add(dii);
+		panel3.add(adci);
+		panel3.add(adii);
+		
+		frame.add(panel3, BorderLayout.SOUTH);
+		
 		JButton buttonLM = new JButton("Definir Long Method");
+
 		buttonLM.addActionListener(new ActionListener() {
 			
 			@Override
@@ -75,17 +90,18 @@ public class GUI {
 				JFrame frame1 = new JFrame();
 				JPanel panelLM = new JPanel();
 				JPanel panelFE = new JPanel();
-				
+								
 				JPanel lmButtons = new JPanel();
 				JPanel lmTexts = new JPanel();
 				JPanel feButtons = new JPanel();
 				JPanel feTexts = new JPanel();
 				
-//				panelFE.setLayout(new BorderLayout());
+				
 				feButtons.setLayout(new BorderLayout());
 				feTexts.setLayout(new BorderLayout());
 				lmButtons.setLayout(new BorderLayout());
 				lmTexts.setLayout(new BorderLayout());
+		
 				
 				panelFE.add(buttonFE, BorderLayout.SOUTH);
 				panelFE.add(feButtons, BorderLayout.WEST);
@@ -106,10 +122,113 @@ public class GUI {
 				frame1.add(panelLM, BorderLayout.NORTH);
 				frame1.add(panelFE, BorderLayout.SOUTH);
 				frame1.setVisible(true);
-				frame1.setSize(200, 150);
+				frame1.setSize(300, 150);
 				
 			}
 		});
+		
+		procuraIPlasma.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+		}
+		});
+		
+		procuraPMD.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+		}
+		});
+		
+		
+		dci.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame frame2 = new JFrame();
+				JPanel paneldci = new JPanel();
+				paneldci.setLayout(new GridLayout(2,1));
+				
+				JButton buttoniPLasma0 = new JButton("Testar IPlasma");
+				JButton buttonPMD0 = new JButton("Testar PMD");
+				
+				paneldci.add(buttoniPLasma0);
+				paneldci.add(buttonPMD0);
+				
+				frame2.add(paneldci);
+				frame2.setVisible(true);
+				frame2.setSize(200, 150);
+
+				
+				
+				
+		}
+		});
+		
+		
+		dii.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame frame3 = new JFrame();
+				JPanel paneldii = new JPanel();
+				paneldii.setLayout(new GridLayout(2,1));
+				
+				JButton buttoniPLasma1 = new JButton("Testar IPlasma");
+				JButton buttonPMD1 = new JButton("Testar PMD");
+				
+				paneldii.add(buttoniPLasma1);
+				paneldii.add(buttonPMD1);
+				
+				frame3.add(paneldii);
+				frame3.setVisible(true);
+				frame3.setSize(200, 150);
+				
+		}
+		});
+		
+		
+		adci.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame frame4 = new JFrame();
+				JPanel paneladci = new JPanel();
+				paneladci.setLayout(new GridLayout(2,1));
+				
+				JButton buttoniPLasma2 = new JButton("Testar IPlasma");
+				JButton buttonPMD2 = new JButton("Testar PMD");
+				
+				paneladci.add(buttoniPLasma2);
+				paneladci.add(buttonPMD2);
+				
+				frame4.add(paneladci);
+				frame4.setVisible(true);
+				frame4.setSize(200, 150);
+				
+		}
+		});
+		
+		
+		adii.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame frame5 = new JFrame();
+				JPanel paneladii = new JPanel();
+				paneladii.setLayout(new GridLayout(2,1));
+				
+				JButton buttoniPLasma3 = new JButton("Testar IPlasma");
+				JButton buttonPMD3 = new JButton("Testar PMD");
+				
+				paneladii.add(buttoniPLasma3);
+				paneladii.add(buttonPMD3);
+				
+				frame5.add(paneladii);
+				frame5.setVisible(true);
+				frame5.setSize(200, 150);
+				
+		}
+		});
+		
+		
 		
 		frame.add(panelEast,BorderLayout.EAST);
 		frame.add(panelWest, BorderLayout.WEST);
@@ -243,20 +362,7 @@ public class GUI {
 		
 //		frame.add(panel2, BorderLayout.EAST);
 		
-		JPanel panel3 = new JPanel();
-		panel3.setLayout(new GridLayout(1, 4));
-	
-		JButton dci = new JButton("DCI");
-		JButton dii = new JButton("DII");
-		JButton adci = new JButton("ADCI");
-		JButton adii = new JButton("ADII");
-		
-		panel3.add(dci);
-		panel3.add(dii);
-		panel3.add(adci);
-		panel3.add(adii);
-		
-		frame.add(panel3, BorderLayout.SOUTH);
+
 		
 	}
 	
