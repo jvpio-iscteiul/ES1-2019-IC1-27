@@ -1,8 +1,12 @@
 import java.awt.BorderLayout;
+
 import java.awt.FlowLayout;
+
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
@@ -205,6 +210,49 @@ public class GUI {
 				
 			}
 		});
+		JButton tabela = new JButton("Tabela EXCEL");
+		tabela.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+				String path = "C:\\Users\\Ricardo\\Downloads\\Long-Method.xlsx";
+				File file = new File(path);
+				if(file.exists()) {	
+					Process pro =Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+path);
+					pro.waitFor();
+				} else {
+					System.out.println("File does  not exist");
+				}
+				
+					
+				} catch (Exception e1) {
+					System.out.println("e1");
+				}
+				
+				
+				
+				
+				
+//				JFrame frame1 = new JFrame();
+//				
+//				JPanel jpanel = new JPanel();
+//								
+//				JTable tabela = new JTable();
+//				tabela.setPreferredScrollableViewportSize(new Dimension(200,200));
+//				tabela.setFillsViewportHeight(true);
+//				JScrollPane scrollpane = new JScrollPane(tabela);
+//				jpanel.add(scrollpane);
+//				
+//				jpanel.add(tabela, BorderLayout.CENTER);
+//				
+//				
+//				frame1.add(jpanel, BorderLayout.CENTER);
+//				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//				frame1.setVisible(true);
+//				frame1.setSize(1000, 600);
+			}
+		});
 		
 		procuraIPlasma.addActionListener(new ActionListener() {
 			@Override
@@ -214,6 +262,13 @@ public class GUI {
 		});
 		
 		procuraPMD.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+		}
+		});
+		
+		tabela.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
@@ -313,9 +368,10 @@ public class GUI {
 		frame.add(panelWest, BorderLayout.WEST);
 		panelEast.add(panelProcura);
 		
-		panelProcura.add(procuraIPlasma, BorderLayout.NORTH);
-		panelProcura.add(procuraPMD, BorderLayout.CENTER);
-		panelProcura.add(procuraValores, BorderLayout.SOUTH);
+		panelProcura.add(procuraIPlasma, BorderLayout.EAST);
+		panelProcura.add(procuraPMD, BorderLayout.WEST);
+		panelProcura.add(procuraValores, BorderLayout.NORTH);
+		panelProcura.add(tabela, BorderLayout.SOUTH);
 		
 		
 		frame.add(centro, BorderLayout.CENTER);
