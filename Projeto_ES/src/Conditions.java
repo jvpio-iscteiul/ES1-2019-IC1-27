@@ -117,7 +117,7 @@ public class Conditions {
 		return count;
 	}
 	
-	public int compareIPlasma() {
+	public int getIPlasma() {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
 			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
@@ -129,7 +129,7 @@ public class Conditions {
 	}
 
 	
-	public int comparePmd() {
+	public int getPmd() {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
 			boolean pmd = rcb.ReadCellData(i, PMD);
@@ -143,8 +143,8 @@ public class Conditions {
 	public static void main(String[] args)   {  
 		Conditions c = new Conditions();
 		System.out.println("aaa");
-		System.out.println(c.compareIPlasma());
-		System.out.println(c.comparePmd());
+		System.out.println(c.getIPlasma());
+		System.out.println(c.getPmd());
 		System.out.println("Oi");
 	}
 

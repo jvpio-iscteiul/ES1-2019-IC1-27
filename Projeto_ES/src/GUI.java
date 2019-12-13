@@ -85,7 +85,7 @@ public class GUI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cond.compareIPlasma();
+				cond.getIPlasma();
 			}
 		});
 		JButton procuraPMD = new JButton("Procura PMD");
@@ -93,7 +93,7 @@ public class GUI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cond.comparePmd();
+				cond.getPmd();
 			}
 		});
 		JButton procuraValores = new JButton("Procura Valores do Utilizador");
