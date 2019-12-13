@@ -393,7 +393,7 @@ public class GUI {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("LOADING...");
 						System.out.println("DII= " + cond.getDII("buttoniPLasma1"));
-						iPlasmadii.setText(Integer.toString(cond.getDCI("buttoniPLasma1")));
+						iPlasmadii.setText(Integer.toString(cond.getDII("buttoniPLasma1")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
@@ -419,10 +419,10 @@ public class GUI {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("LOADING...");
 						System.out.println("DII= " + cond.getDII("buttonPMD1"));
-						PMDdii.setText(Integer.toString(cond.getDCI("buttonPMD1")));
+						PMDdii.setText(Integer.toString(cond.getDII("buttonPMD1")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
-						
+//						
 //						frame.setVisible(false);
 //						centro.removeAll();
 //						JLabel dii = new JLabel("DII-PMD:");
@@ -459,11 +459,11 @@ public class GUI {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("LOADING...");
 						System.out.println("ADCI= " + cond.getADCI("buttoniPLasma2"));
-						iPlasmaadci.setText(Integer.toString(cond.getDCI("buttoniPLasma2")));
+						iPlasmaadci.setText(Integer.toString(cond.getADCI("buttoniPLasma2")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
-//						
+						
 //						frame.setVisible(false);
 //						centro.removeAll();
 //						JLabel adci = new JLabel("ADCI-iPlasma:");
@@ -485,7 +485,7 @@ public class GUI {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("LOADING...");
 						System.out.println("ADCI= " + cond.getADCI("buttonPMD2"));
-						PMDadci.setText(Integer.toString(cond.getDCI("buttonPMD2")));
+						PMDadci.setText(Integer.toString(cond.getADCI("buttonPMD2")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
@@ -532,7 +532,7 @@ public class GUI {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("LOADING...");
 						System.out.println("ADII= " + cond.getADII("buttoniPLasma3"));
-						iPlasmadci.setText(Integer.toString(cond.getDCI("buttoniPLasma3")));
+						iPlasmaadii.setText(Integer.toString(cond.getADII("buttoniPLasma3")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
@@ -558,7 +558,7 @@ public class GUI {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println("LOADING...");
 						System.out.println("ADII= " + cond.getADII("buttonPMD3"));
-						PMDadci.setText(Integer.toString(cond.getDCI("buttonPMD3")));
+						PMDadii.setText(Integer.toString(cond.getADII("buttonPMD3")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
