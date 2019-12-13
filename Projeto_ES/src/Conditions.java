@@ -3,6 +3,8 @@ import java.io.FilterInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.JButton;
 import javax.swing.JTextField;
 
 public class Conditions {
@@ -25,8 +27,8 @@ public class Conditions {
 	private List<String> lista1;
 	private List<String> lista2;
 
-	
-	
+
+
 	public Conditions() {
 		this.rci = new ReadCellInteger();
 		this.rcb = new ReadCellBoolean();
@@ -44,7 +46,7 @@ public class Conditions {
 			int lim2 = rci.ReadCellData(i, CYCLO);
 			if (lim1 > x && lim2 > y) 
 				System.out.println(rcs.ReadCellData(i, METHOD));
-				lista1.add(rcs.ReadCellData(i, METHOD));
+			lista1.add(rcs.ReadCellData(i, METHOD));
 		}
 		return lista1;
 	}
@@ -62,83 +64,122 @@ public class Conditions {
 		}
 		return lista2;
 	}
-		
-	
-	public int getDCI(JTextField tx1) {
-		int count = 0;
-		for (int i = 1; i < LENGTH; i++) {
-			boolean pmd = rcb.ReadCellData(i, PMD);
-			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
-			boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
-			if(is_long_method == true && (iPlasma || pmd) == true) {
-				count++;
-			}
-		}
-		return count;
-	}
 
-	
-	public int getDII() {
-		int count = 0;
-		for (int i = 1; i < LENGTH; i++) {
-			boolean pmd = rcb.ReadCellData(i, PMD);
-			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
-			boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
-			if(is_long_method == true && (iPlasma || pmd) == false) {
-				count++;
-			}
-		}
-		return count;
-	}
 
-	public int getADCI() {
+	public int getDCI(String butao) {
 		int count = 0;
-		for (int i = 1; i < LENGTH; i++) {
-			boolean pmd = rcb.ReadCellData(i, PMD);
-			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
-			boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
-			if(is_long_method == false && (iPlasma || pmd) == false) {
-				count++;
+		if (butao.contains("buttoniPLasma0")) {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == true && iPlasma == true) {
+					count++;
+				}
 			}
-		}
-		return count;
-	}
-
-	public int getADII() {
-		int count = 0;
-		for (int i = 1; i < LENGTH; i++) {
-			boolean pmd = rcb.ReadCellData(i, PMD);
-			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
-			boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
-			if(is_long_method == false && (iPlasma || pmd) == true) {
-				count++;
+		} else {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean pmd = rcb.ReadCellData(i, PMD);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == true && pmd == true) {
+					count++;
+				}
 			}
 		}
 		return count;
 	}
 	
+	public int getDII(String butao) {
+		int count = 0;
+		if (butao.contains("buttoniPLasma1")) {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == true && iPlasma == false) {
+					count++;
+				}
+			}
+		} else {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean pmd = rcb.ReadCellData(i, PMD);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == true && pmd == false) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+	
+	public int getADCI(String butao) {
+		int count = 0;
+		System.out.println(butao);
+		if (butao.contains("buttoniPLasma2")) {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == false && iPlasma == false) {
+					count++;
+				}
+			}
+		} else {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean pmd = rcb.ReadCellData(i, PMD);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == false && pmd == false) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+
+	public int getADII(String butao) {
+		int count = 0;
+		if (butao.contains("buttoniPLasma3")) {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == false && iPlasma == true) {
+					count++;
+				}
+			}
+		} else {
+			for (int i = 1; i < LENGTH; i++) {
+				boolean pmd = rcb.ReadCellData(i, PMD);
+				boolean is_long_method = rcb.ReadCellData(i, IS_LONG_METHOD);
+				if(is_long_method == false && pmd == true) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+
 	public int getIPlasma() {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
 			boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
-			
+
 			if (iPlasma == true)
 				count++;
 		}
 		return count;
 	}
 
-	
+
 	public int getPmd() {
 		int count = 0;
 		for (int i = 1; i < LENGTH; i++) {
 			boolean pmd = rcb.ReadCellData(i, PMD);
-			
+
 			if (pmd == true)
 				count++;
 		}
 		return count;
 	}
+
 
 	public static void main(String[] args)   {  
 		Conditions c = new Conditions();
@@ -148,10 +189,10 @@ public class Conditions {
 		System.out.println("Oi");
 	}
 
-	
-	
-	
-	
-	
+
+
+
+
+
 
 }

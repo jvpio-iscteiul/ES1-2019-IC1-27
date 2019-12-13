@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
+import javax.swing.event.AncestorListener;
 
 public class GUI {
 	
@@ -144,14 +145,14 @@ public class GUI {
 		procuraIPlasma.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				System.out.println("OOOOOOOOOOOO");
 		}
 		});
 		
 		procuraPMD.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				System.out.println("AAAAAAAAAAAAA");
 		}
 		});
 		
@@ -164,7 +165,23 @@ public class GUI {
 				paneldci.setLayout(new GridLayout(2,1));
 				
 				JButton buttoniPLasma0 = new JButton("Testar IPlasma");
+				buttoniPLasma0.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("DCI= " + cond.getDCI("buttoniPLasma0"));
+					}
+				});
 				JButton buttonPMD0 = new JButton("Testar PMD");
+				buttonPMD0.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("DCI= " + cond.getDCI("buttonPMD0"));
+					}
+				});
 				
 				paneldci.add(buttoniPLasma0);
 				paneldci.add(buttonPMD0);
@@ -191,7 +208,23 @@ public class GUI {
 				JButton buttonPMD1 = new JButton("Testar PMD");
 				
 				paneldii.add(buttoniPLasma1);
+				buttoniPLasma1.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("DII= " + cond.getDII("buttoniPLasma1"));
+					}
+				});
 				paneldii.add(buttonPMD1);
+				buttonPMD1.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("DII= " + cond.getDII("buttonPMD1"));			
+					}
+				});
 				
 				frame3.add(paneldii);
 				frame3.setVisible(true);
@@ -209,10 +242,27 @@ public class GUI {
 				paneladci.setLayout(new GridLayout(2,1));
 				
 				JButton buttoniPLasma2 = new JButton("Testar IPlasma");
+				buttoniPLasma2.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("ADCI= " + cond.getADCI("buttoniPLasma2"));
+					}
+				});
 				JButton buttonPMD2 = new JButton("Testar PMD");
+				buttonPMD2.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("ADCI= " + cond.getADCI("buttonPMD2"));
+					}
+				});
 				
 				paneladci.add(buttoniPLasma2);
 				paneladci.add(buttonPMD2);
+				
 				
 				frame4.add(paneladci);
 				frame4.setVisible(true);
@@ -233,7 +283,23 @@ public class GUI {
 				JButton buttonPMD3 = new JButton("Testar PMD");
 				
 				paneladii.add(buttoniPLasma3);
+				buttoniPLasma3.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("ADII= " + cond.getADII("buttoniPLasma3"));
+					}
+				});
 				paneladii.add(buttonPMD3);
+				buttonPMD3.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("LOADING...");
+						System.out.println("ADII= " + cond.getADII("buttonPMD3"));
+					}
+				});
 				
 				frame5.add(paneladii);
 				frame5.setVisible(true);
@@ -382,12 +448,8 @@ public class GUI {
 	
 	
 	public static void main(String[] args) {
-
 		GUI frame = new GUI();
-		System.out.println(" agggaagggs");
-		System.out.println("oi");
 		frame.open();
-		System.out.println("o");
 	}
 
 }
