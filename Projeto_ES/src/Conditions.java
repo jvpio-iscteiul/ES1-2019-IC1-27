@@ -59,7 +59,7 @@ public class Conditions {
 		for (int i = 1; i < LENGTH; i++) {
 			int lim1 = rci.ReadCellData(i, ATFD);
 			int lim2 = rci.ReadCellData(i, LAA);
-			if (lim1 > x && lim2 < y) 
+			if (lim1 > x && lim2 > y) 
 				lista2.add(rcs.ReadCellData(i, METHOD));
 		}
 		return lista2;
