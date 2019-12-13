@@ -129,16 +129,16 @@ public class GUI {
 
 			
 				frame.setVisible(false);
-				centro.removeAll();
-				DefaultListModel<String> model = new DefaultListModel<String>();
-
-				List<String> lista = cond.setLongMethod(textLOC, textCYCLO);
-
-				for (String s : lista)
-					model.addElement(s);
-
-				JList<String> list = new JList<String>(model);
-				centro.add(list);
+//				centro.removeAll();
+//				DefaultListModel<String> model = new DefaultListModel<String>();
+//
+//				List<String> lista = cond.setLongMethod(textLOC, textCYCLO);
+//
+//				for (String s : lista)
+//					model.addElement(s);
+//
+//				JList<String> list = new JList<String>(model);
+//				centro.add(list);
 
 				frame.setVisible(true);
 
@@ -151,16 +151,16 @@ public class GUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
-				centro.removeAll();
-
-				DefaultListModel<String> model = new DefaultListModel<String>();
-				List<String> list = cond.setFeatureEnvy(textATFD, textLAA);
-
-				for (String s : list)
-					model.addElement(s);
-
-				JList<String> lista = new JList<String>(model);
-				centro.add(lista);
+//				centro.removeAll();
+//
+//				DefaultListModel<String> model = new DefaultListModel<String>();
+//				List<String> list = cond.setFeatureEnvy(textATFD, textLAA);
+//
+//				for (String s : list)
+//					model.addElement(s);
+//
+//				JList<String> lista = new JList<String>(model);
+//				centro.add(lista);
 
 				frame.setVisible(true);
 
@@ -243,6 +243,7 @@ public class GUI {
 				frame1.add(panelFE, BorderLayout.SOUTH);
 				frame1.setVisible(true);
 				frame1.setSize(300, 150);
+				
 
 			}
 		});
