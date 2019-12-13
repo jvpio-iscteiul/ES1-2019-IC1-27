@@ -14,7 +14,7 @@ public class ReadCellString   {
 		Workbook wb=null;           //initialize Workbook null  
 		try  {  
 			//reading data from a file in the form of bytes  
-			FileInputStream fis=new FileInputStream("C:\\Users\\joaov\\Downloads\\Long-Method.xlsx");  
+			FileInputStream fis=new FileInputStream("Long-Method.xlsx");  
 			//constructs an XSSFWorkbook object, by buffering the whole stream into the memory  
 			wb=new XSSFWorkbook(fis);  
 		}  
