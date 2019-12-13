@@ -35,9 +35,9 @@ public class Conditions {
 	}
 
 	public List<String> setLongMethod(JTextField locLimit, JTextField cycloLImit) {
-		String ll = locLimit.getText();
+		String ll = locLimit.getText().trim();
 		int x = Integer.parseInt(ll);
-		String cl = cycloLImit.getText();
+		String cl = cycloLImit.getText().trim();
 		int y = Integer.parseInt(cl);
 		for (int i = 1; i < LENGTH; i++) {
 			int lim1 = rci.ReadCellData(i, LOC);
