@@ -8,6 +8,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/Diogo/Downloads/poi-ooxml-schemas-3.17.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Diogo/Downloads/poi-3.17.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Diogo/Downloads/commons-collections4-4.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
