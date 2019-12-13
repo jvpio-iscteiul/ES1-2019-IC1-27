@@ -7,19 +7,6 @@ import java.util.Iterator;
 public class ExcelReader {
 	
     public static final String SAMPLE_XLSX_FILE_PATH = "C:\\Users\\joaov\\Downloads\\Long-Method.xlsx";
-    
-    public static void main(String[] args) throws IOException, InvalidFormatException {    	
-        Workbook workbook = WorkbookFactory.create(new File("C:\\Users\\joaov\\Downloads\\Long-Method.xlsx"));
-        Sheet sheet = workbook.getSheetAt(0);
-   
-        sheet.forEach(row -> {
-    	    row.forEach(cell -> {
-    	        printCellValue(cell,12,10);
-    	    });
-    	});
-        workbook.close();
-    }
-    
     private static void printCellValue(Cell cell, int Row, int Column) {	
      
     	if (cell.getRowIndex()==Row && cell.getColumnIndex()==Column){
@@ -48,6 +35,19 @@ public class ExcelReader {
         	}
     	}
     }
+    public static void main(String[] args) throws IOException, InvalidFormatException {    	
+        Workbook workbook = WorkbookFactory.create(new File("C:\\Users\\joaov\\Downloads\\Long-Method.xlsx"));
+        Sheet sheet = workbook.getSheetAt(0);
+   
+        sheet.forEach(row -> {
+    	    row.forEach(cell -> {
+    	        printCellValue(cell,12,10);
+    	    });
+    	});
+        workbook.close();
+    }
+    
+    
     
  
     
