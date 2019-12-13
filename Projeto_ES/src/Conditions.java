@@ -37,9 +37,7 @@ public class Conditions {
 		this.lista2 = new ArrayList<String>();
 	}
 
-	public List<String> setLongMethod(JTextField locLimit, JTextField cycloLImit) {
-
-		
+	public List<String> setLongMethod(JTextField locLimit, JTextField cycloLImit) {		
 //	E preciso isto retornar uma lista com os nome dos metodos para depois eles aparecerem na GUI, mesmo na setFeatureEnvy
 		String ll = locLimit.getText().trim();
 		int x = Integer.parseInt(ll);
@@ -79,6 +77,50 @@ public class Conditions {
 
 		}
 		return lista2;
+	}
+	
+	public int compareValoresDCI () {
+		int count = 0;
+		for (int i = 1; i < LENGTH; i++) {
+			boolean longMethod = rcb.ReadCellData(i, IS_LONG_METHOD);
+			String valores = lista1.get(i);
+			if (longMethod == true && valores.contains("TRUE"))
+				count++;
+		}
+		return count;
+	}
+	
+	public int compareValoresDII () {
+		int count = 0;
+		for (int i = 1; i < LENGTH; i++) {
+			boolean longMethod = rcb.ReadCellData(i, IS_LONG_METHOD);
+			String valores = lista1.get(i);
+			if (longMethod == true && valores.contains("FALSE"))
+				count++;
+		}
+		return count;
+	}
+	
+	public int compareValoresADCI () {
+		int count = 0;
+		for (int i = 1; i < LENGTH; i++) {
+			boolean longMethod = rcb.ReadCellData(i, IS_LONG_METHOD);
+			String valores = lista1.get(i);
+			if (longMethod == false && valores.contains("FALSE"))
+				count++;
+		}
+		return count;
+	}
+	
+	public int compareValoresADII () {
+		int count = 0;
+		for (int i = 1; i < LENGTH; i++) {
+			boolean longMethod = rcb.ReadCellData(i, IS_LONG_METHOD);
+			String valores = lista1.get(i);
+			if (longMethod == false && valores.contains("TRUE"))
+				count++;
+		}
+		return count;
 	}
 
 
