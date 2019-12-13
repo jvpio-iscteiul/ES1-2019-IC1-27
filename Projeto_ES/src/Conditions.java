@@ -38,6 +38,9 @@ public class Conditions {
 	}
 
 	public List<String> setLongMethod(JTextField locLimit, JTextField cycloLImit) {
+
+		
+//	E preciso isto retornar uma lista com os nome dos metodos para depois eles aparecerem na GUI, mesmo na setFeatureEnvy
 		String ll = locLimit.getText().trim();
 		int x = Integer.parseInt(ll);
 		String cl = cycloLImit.getText().trim();
@@ -45,8 +48,10 @@ public class Conditions {
 		for (int i = 1; i < LENGTH; i++) {
 			int lim1 = rci.ReadCellData(i, LOC);
 			int lim2 = rci.ReadCellData(i, CYCLO);
-			if (lim1 > x && lim2 > y) 
+			if (lim1 > x && lim2 > y) {
 				lista1.add("TRUE");
+			}
+			
 			else
 				lista1.add("FALSE");
 		}
