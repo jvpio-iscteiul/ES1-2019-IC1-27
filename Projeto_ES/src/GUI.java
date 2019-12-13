@@ -269,201 +269,244 @@ public class GUI {
 		});
 
 		dci.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame2 = new JFrame();
-				JPanel paneldci = new JPanel();
-				paneldci.setLayout(new GridLayout(2, 1));
-
-				JButton buttoniPLasma0 = new JButton("Testar IPlasma");
-				buttoniPLasma0.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("DCI= " + cond.getDCI("buttoniPLasma0"));
-						iPlasmadci.setText(Integer.toString(cond.getDCI("buttoniPlasma0")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-
-						frame2.setVisible(false);
-
-					}
-				});
-				JButton buttonPMD0 = new JButton("Testar PMD");
-				buttonPMD0.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("DCI= " + cond.getDCI("buttonPMD0"));
-						PMDdci.setText(Integer.toString(cond.getDCI("buttoniPMD0")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-						
-						frame2.setVisible(false);
-					}
-				});
-
-				paneldci.add(buttoniPLasma0);
-				paneldci.add(buttonPMD0);
-
-				frame2.add(paneldci);
-				frame2.setVisible(true);
-				frame2.setSize(200, 150);
-
+				valores.setSize(300,150);
+				
+				iPlasmadci.setText(Integer.toString(cond.getDCI("buttoniPlasma0")));
+				PMDdci.setText(Integer.toString(cond.getDCI("buttoniPMD0")));
+				
+				valores.setVisible(true);
+				
 			}
 		});
+		
+//				JFrame frame2 = new JFrame();
+//				JPanel paneldci = new JPanel();
+//				paneldci.setLayout(new GridLayout(2, 1));
+//
+//				JButton buttoniPLasma0 = new JButton("Testar IPlasma");
+//				buttoniPLasma0.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("DCI= " + cond.getDCI("buttoniPLasma0"));
+//						iPlasmadci.setText(Integer.toString(cond.getDCI("buttoniPlasma0")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//
+//						frame2.setVisible(false);
+//
+//					}
+//				});
+//				JButton buttonPMD0 = new JButton("Testar PMD");
+//				buttonPMD0.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("DCI= " + cond.getDCI("buttonPMD0"));
+//						PMDdci.setText(Integer.toString(cond.getDCI("buttoniPMD0")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//						
+//						frame2.setVisible(false);
+//					}
+//				});
+//
+//				paneldci.add(buttoniPLasma0);
+//				paneldci.add(buttonPMD0);
+//
+//				frame2.add(paneldci);
+//				frame2.setVisible(true);
+//				frame2.setSize(200, 150);
+//
+//			}
+//		});
 
 		dii.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame3 = new JFrame();
-				JPanel paneldii = new JPanel();
-				paneldii.setLayout(new GridLayout(2, 1));
-
-				JButton buttoniPLasma1 = new JButton("Testar IPlasma");
-				JButton buttonPMD1 = new JButton("Testar PMD");
-
-				paneldii.add(buttoniPLasma1);
-				buttoniPLasma1.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("DII= " + cond.getDII("buttoniPLasma1"));
-						iPlasmadii.setText(Integer.toString(cond.getDII("buttoniPLasma1")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-						
-						frame3.setVisible(false);
-					}
-				});
-				paneldii.add(buttonPMD1);
-				buttonPMD1.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("DII= " + cond.getDII("buttonPMD1"));
-						PMDdii.setText(Integer.toString(cond.getDII("buttonPMD1")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-
-						frame3.setVisible(false);
-					}
-				});
-
-				frame3.add(paneldii);
-				frame3.setVisible(true);
-				frame3.setSize(200, 150);
-
+				valores.setSize(300,150);
+				
+				iPlasmadii.setText(Integer.toString(cond.getDII("buttoniPLasma1")));
+				PMDdii.setText(Integer.toString(cond.getDII("buttonPMD1")));
+				
+				valores.setVisible(true);
+				
 			}
 		});
+//				JFrame frame3 = new JFrame();
+//				JPanel paneldii = new JPanel();
+//				paneldii.setLayout(new GridLayout(2, 1));
+//
+//				JButton buttoniPLasma1 = new JButton("Testar IPlasma");
+//				JButton buttonPMD1 = new JButton("Testar PMD");
+//
+//				paneldii.add(buttoniPLasma1);
+//				buttoniPLasma1.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("DII= " + cond.getDII("buttoniPLasma1"));
+//						iPlasmadii.setText(Integer.toString(cond.getDII("buttoniPLasma1")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//						
+//						frame3.setVisible(false);
+//					}
+//				});
+//				paneldii.add(buttonPMD1);
+//				buttonPMD1.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("DII= " + cond.getDII("buttonPMD1"));
+//						PMDdii.setText(Integer.toString(cond.getDII("buttonPMD1")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//
+//						frame3.setVisible(false);
+//					}
+//				});
+//
+//				frame3.add(paneldii);
+//				frame3.setVisible(true);
+//				frame3.setSize(200, 150);
+//
+//			}
+//		});
 
 		adci.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame4 = new JFrame();
-				JPanel paneladci = new JPanel();
-				paneladci.setLayout(new GridLayout(2, 1));
-
-				JButton buttoniPLasma2 = new JButton("Testar IPlasma");
-				buttoniPLasma2.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("ADCI= " + cond.getADCI("buttoniPLasma2"));
-						iPlasmaadci.setText(Integer.toString(cond.getADCI("buttoniPLasma2")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-						
-						frame4.setVisible(false);
-					}
-				});
-				JButton buttonPMD2 = new JButton("Testar PMD");
-				buttonPMD2.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("ADCI= " + cond.getADCI("buttonPMD2"));
-						PMDadci.setText(Integer.toString(cond.getADCI("buttonPMD2")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-						
-						frame4.setVisible(false);
-					}
-				});
-
-				paneladci.add(buttoniPLasma2);
-				paneladci.add(buttonPMD2);
-
-				frame4.add(paneladci);
-				frame4.setVisible(true);
-				frame4.setSize(200, 150);
-
+				valores.setSize(300,150);
+				
+				iPlasmaadci.setText(Integer.toString(cond.getADCI("buttoniPLasma2")));
+				PMDadci.setText(Integer.toString(cond.getADCI("buttonPMD2")));
+				
+				valores.setVisible(true);
 			}
 		});
+				
+			
+//				JFrame frame4 = new JFrame();
+//				JPanel paneladci = new JPanel();
+//				paneladci.setLayout(new GridLayout(2, 1));
+//
+//				JButton buttoniPLasma2 = new JButton("Testar IPlasma");
+//				buttoniPLasma2.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("ADCI= " + cond.getADCI("buttoniPLasma2"));
+//						iPlasmaadci.setText(Integer.toString(cond.getADCI("buttoniPLasma2")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//						
+//						frame4.setVisible(false);
+//					}
+//				});
+//				
+//				JButton buttonPMD2 = new JButton("Testar PMD");
+//				buttonPMD2.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("ADCI= " + cond.getADCI("buttonPMD2"));
+//						PMDadci.setText(Integer.toString(cond.getADCI("buttonPMD2")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//						
+//						frame4.setVisible(false);
+//					}
+//				});
+//
+//				paneladci.add(buttoniPLasma2);
+//				paneladci.add(buttonPMD2);
+//
+//				frame4.add(paneladci);
+//				frame4.setVisible(true);
+//				frame4.setSize(200, 150);
+//
+//			}
+		
 
 		adii.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame5 = new JFrame();
-				JPanel paneladii = new JPanel();
-				paneladii.setLayout(new GridLayout(2, 1));
-
-				JButton buttoniPLasma3 = new JButton("Testar IPlasma");
-				JButton buttonPMD3 = new JButton("Testar PMD");
-
-				paneladii.add(buttoniPLasma3);
-				buttoniPLasma3.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("ADII= " + cond.getADII("buttoniPLasma3"));
-						iPlasmaadii.setText(Integer.toString(cond.getADII("buttoniPLasma3")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-						
-						frame5.setVisible(false);
-					}
-				});
-				paneladii.add(buttonPMD3);
-				buttonPMD3.addActionListener(new ActionListener() {
-
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						System.out.println("LOADING...");
-						System.out.println("ADII= " + cond.getADII("buttonPMD3"));
-						PMDadii.setText(Integer.toString(cond.getADII("buttonPMD3")));
-						valores.setVisible(true);
-						valores.setSize(300, 150);
-						
-						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel adii = new JLabel("ADII-PMD:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getADII("buttoniPMD3");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(adii);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
-						frame5.setVisible(false);
-					}
-				});
-
-				frame5.add(paneladii);
-				frame5.setVisible(true);
-				frame5.setSize(200, 150);
-
+				valores.setSize(300,150);
+				
+				iPlasmaadii.setText(Integer.toString(cond.getADII("buttoniPLasma3")));
+				PMDadii.setText(Integer.toString(cond.getADII("buttonPMD3")));
+				
+				valores.setVisible(true);
+				
 			}
 		});
+//				JFrame frame5 = new JFrame();
+//				JPanel paneladii = new JPanel();
+//				paneladii.setLayout(new GridLayout(2, 1));
+//
+//				JButton buttoniPLasma3 = new JButton("Testar IPlasma");
+//				JButton buttonPMD3 = new JButton("Testar PMD");
+//
+//				paneladii.add(buttoniPLasma3);
+//				buttoniPLasma3.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("ADII= " + cond.getADII("buttoniPLasma3"));
+//						iPlasmaadii.setText(Integer.toString(cond.getADII("buttoniPLasma3")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//						
+//						frame5.setVisible(false);
+//					}
+//				});
+//				paneladii.add(buttonPMD3);
+//				buttonPMD3.addActionListener(new ActionListener() {
+//
+//					@Override
+//					public void actionPerformed(ActionEvent e) {
+//						System.out.println("LOADING...");
+//						System.out.println("ADII= " + cond.getADII("buttonPMD3"));
+//						PMDadii.setText(Integer.toString(cond.getADII("buttonPMD3")));
+//						valores.setVisible(true);
+//						valores.setSize(300, 150);
+//						
+//						
+////						frame.setVisible(false);
+////						centro.removeAll();
+////						JLabel adii = new JLabel("ADII-PMD:");
+////						JLabel valor = new JLabel();
+////						int i = cond.getADII("buttoniPMD3");
+////						valor.setText(Integer.toString(i));
+////
+////						centro.add(adii);
+////						centro.add(valor);
+////
+////						frame.setVisible(true);
+//						frame5.setVisible(false);
+//					}
+//				});
+//
+//				frame5.add(paneladii);
+//				frame5.setVisible(true);
+//				frame5.setSize(200, 150);
+//
+//			}
+//		});
 
 		frame.add(panelEast, BorderLayout.EAST);
 		frame.add(panelWest, BorderLayout.WEST);
