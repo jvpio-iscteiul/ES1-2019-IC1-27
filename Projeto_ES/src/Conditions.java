@@ -34,6 +34,7 @@ public class Conditions {
 		this.rcb = new ReadCellBoolean();
 		this.rcs = new ReadCellString();
 		this.lista1 = new ArrayList<String>();
+		this.lista2 = new ArrayList<String>();
 	}
 
 	public List<String> setLongMethod(JTextField locLimit, JTextField cycloLImit) {
@@ -45,8 +46,9 @@ public class Conditions {
 			int lim1 = rci.ReadCellData(i, LOC);
 			int lim2 = rci.ReadCellData(i, CYCLO);
 			if (lim1 > x && lim2 > y) 
-				System.out.println(rcs.ReadCellData(i, METHOD));
-			lista1.add(rcs.ReadCellData(i, METHOD));
+				lista1.add("TRUE");
+			else
+				lista1.add("FALSE");
 		}
 		return lista1;
 	}
@@ -58,9 +60,12 @@ public class Conditions {
 		int y = Integer.parseInt(cl);
 		for (int i = 1; i < LENGTH; i++) {
 			int lim1 = rci.ReadCellData(i, ATFD);
-			int lim2 = rci.ReadCellData(i, LAA);
-			if (lim1 > x && lim2 < y) 
-				lista2.add(rcs.ReadCellData(i, METHOD));
+			String lim2 = rcs.ReadCellData(i, LAA);
+			int lim2Int = Integer.parseInt(lim2);
+			if (lim1 > x && lim2Int < y) 
+				lista2.add("TRUE");
+			else
+				lista2.add("FALSE");
 		}
 		return lista2;
 	}

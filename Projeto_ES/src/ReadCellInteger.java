@@ -35,7 +35,7 @@ public class ReadCellInteger   {
 	public static void main(String[] args)   {  
 		ReadCellInteger rc=new ReadCellInteger();   //object of the class  
 		//reading the value of 2nd row and 2nd column  
-		int vOutput=rc.ReadCellData(420, 4);   
+		int vOutput=rc.ReadCellData(11, 7);   
 		System.out.println(vOutput);
 	}  
 	//method defined for reading a cell 

@@ -35,7 +35,7 @@ public class ReadCellString   {
 	public static void main(String[] args)   {  
 		ReadCellString rc=new ReadCellString();   //object of the class  
 		//reading the value of 2nd row and 2nd column  
-		String vOutput=rc.ReadCellData(15, 3);   
+		String vOutput=rc.ReadCellData(7, 7);   
 		System.out.println(vOutput);  
 	}
 	
