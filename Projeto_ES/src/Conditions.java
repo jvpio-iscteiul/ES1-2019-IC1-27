@@ -112,7 +112,6 @@ public class Conditions {
 	
 	public int getADCI(String butao) {
 		int count = 0;
-		System.out.println(butao);
 		if (butao.contains("buttoniPLasma2")) {
 			for (int i = 1; i < LENGTH; i++) {
 				boolean iPlasma = rcb.ReadCellData(i, IPLASMA);
