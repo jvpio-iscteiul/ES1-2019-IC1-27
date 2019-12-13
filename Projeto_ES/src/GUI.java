@@ -265,44 +265,6 @@ public class GUI {
 					System.out.println("e1");
 				}
 
-//				JFrame frame1 = new JFrame();
-//				
-//				JPanel jpanel = new JPanel();
-//								
-//				JTable tabela = new JTable();
-//				tabela.setPreferredScrollableViewportSize(new Dimension(200,200));
-//				tabela.setFillsViewportHeight(true);
-//				JScrollPane scrollpane = new JScrollPane(tabela);
-//				jpanel.add(scrollpane);
-//				
-//				jpanel.add(tabela, BorderLayout.CENTER);
-//				
-//				
-//				frame1.add(jpanel, BorderLayout.CENTER);
-//				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//				frame1.setVisible(true);
-//				frame1.setSize(1000, 600);
-			}
-		});
-
-		procuraIPlasma.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("OOOOOOOOOOOO");
-			}
-		});
-
-		procuraPMD.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("AAAAAAAAAAAAA");
-			}
-		});
-
-		tabela.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-
 			}
 		});
 
@@ -323,18 +285,7 @@ public class GUI {
 						iPlasmadci.setText(Integer.toString(cond.getDCI("buttoniPlasma0")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
-						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel dci = new JLabel("DCI-iPlasma:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getDCI("buttoniPLasma0");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(dci);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
+
 						frame2.setVisible(false);
 
 					}
@@ -350,18 +301,6 @@ public class GUI {
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
-						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel dci = new JLabel("DCI-PMD:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getDCI("buttoniPMD0");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(dci);
-//						centro.add(valor);
-
-//						frame.setVisible(true);
 						frame2.setVisible(false);
 					}
 				});
@@ -397,18 +336,6 @@ public class GUI {
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
-//						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel dii = new JLabel("DII-iPlasma:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getDII("buttoniPLasma1");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(dii);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
 						frame3.setVisible(false);
 					}
 				});
@@ -422,18 +349,7 @@ public class GUI {
 						PMDdii.setText(Integer.toString(cond.getDII("buttonPMD1")));
 						valores.setVisible(true);
 						valores.setSize(300, 150);
-//						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel dii = new JLabel("DII-PMD:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getDII("buttoniPMD1");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(dii);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
+
 						frame3.setVisible(false);
 					}
 				});
@@ -463,18 +379,6 @@ public class GUI {
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
-						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel adci = new JLabel("ADCI-iPlasma:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getADCI("buttoniPLasma2");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(adci);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
 						frame4.setVisible(false);
 					}
 				});
@@ -489,18 +393,6 @@ public class GUI {
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
-						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel adci = new JLabel("DCI:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getADCI("buttoniPMD2");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(adci);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
 						frame4.setVisible(false);
 					}
 				});
@@ -536,18 +428,6 @@ public class GUI {
 						valores.setVisible(true);
 						valores.setSize(300, 150);
 						
-//						
-//						frame.setVisible(false);
-//						centro.removeAll();
-//						JLabel adii = new JLabel("ADII-iPlasma:");
-//						JLabel valor = new JLabel();
-//						int i = cond.getADII("buttoniPLasma3");
-//						valor.setText(Integer.toString(i));
-//
-//						centro.add(adii);
-//						centro.add(valor);
-//
-//						frame.setVisible(true);
 						frame5.setVisible(false);
 					}
 				});
@@ -601,10 +481,8 @@ public class GUI {
 	public static void main(String[] args) {
 
 		GUI frame = new GUI();
-//		System.out.println(" agggaagggs");
-//		System.out.println("oi");
 		frame.open();
-//		System.out.println("oooooo");
+
 	}
 
 }

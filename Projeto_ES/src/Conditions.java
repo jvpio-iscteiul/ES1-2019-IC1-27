@@ -196,13 +196,13 @@ public class Conditions {
 	}
 
 
-	public static void main(String[] args)   {  
-		Conditions c = new Conditions();
-		System.out.println("aaa");
-		System.out.println(c.getIPlasma());
-		System.out.println(c.getPmd());
-		System.out.println("Oi");
-	}
+//	public static void main(String[] args)   {  
+//		Conditions c = new Conditions();
+//		System.out.println("aaa");
+//		System.out.println(c.getIPlasma());
+//		System.out.println(c.getPmd());
+//		System.out.println("Oi");
+//	}
 
 
 
